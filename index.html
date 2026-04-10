@@ -248,212 +248,216 @@ tw-link {
 (set: $a4 to &quot;&quot;)
 (set: $a5 to &quot;&quot;)
 
-(set: $ALI to 0)  /* Ti regalo nuove ali */
-(set: $SRI to 0)  /* Scacco, Rimbalzo e Inclusione */
-(set: $MSM to 0)  /* Melara si muove */
-(set: $TMP to 0)  /* The Melting Pot */
-(set: $CUL to 0)  /* Culturando! */
-(set: $CYB to 0)  /* Cyber Community */
-(set: $PUP to 0)  /* Power Up */
-(set: $PRO to 0)  /* Protagonisti noi 2.0 */
-(set: $GSR to 0)  /* Giovani Sinergie Rinnovabili */
-(set: $EIC to 0)  /* Energie in Circolo */
-(set: $PDF to 0)  /* Destinazione futuro */
-(set: $SPSU to 0)  /* Special summer 2026 */
-(set: $OMA to 0)  /* O...MA che oratorio! 2026 */
-(set: $UCE to 0)  /* Una Comunità Educante 2026 */
+(set: $ali to 0)  /* Ti regalo nuove ali */
+(set: $sri to 0)  /* Scacco, Rimbalzo e Inclusione */
+(set: $msm to 0)  /* Melara si muove */
+(set: $tmp to 0)  /* The Melting Pot */
+(set: $cul to 0)  /* Culturando! */
+(set: $cyb to 0)  /* Cyber Community */
+(set: $pup to 0)  /* Power Up */
+(set: $pro to 0)  /* Protagonisti noi 2.0 */
+(set: $gsr to 0)  /* Giovani Sinergie Rinnovabili */
+(set: $eic to 0)  /* Energie in Circolo */
+(set: $pdf to 0)  /* Destinazione futuro */
+(set: $spsu to 0)  /* Special summer 2026 */
+(set: $oma to 0)  /* O...MA che oratorio! 2026 */
+(set: $uce to 0)  /* Una Comunità Educante 2026 */
 
 (goto: &quot;Q2_TS&quot;)</tw-passagedata><tw-passagedata pid="4" name="Q2_TS" tags="" position="100,500" size="100,100">Con chi ti piacerebbe lavorare?
 
 (link: &quot;Bambini / preadolescenti&quot;)[
 (set: $a2 to &quot;bambini&quot;)
-(set: $GSR to $GSR + 3)
-(set: $EIC to $EIC + 2)
-(set: $SPSU to $SPSU + 4)
-(set: $OMA to $OMA + 4)
-(set: $UCE to $UCE + 4)
+(set: $gsr to $gsr + 3)
+(set: $eic to $eic + 2)
+(set: $spsu to $spsu + 4)
+(set: $oma to $oma + 4)
+(set: $uce to $uce + 4)
 (goto: &quot;Q3_TS&quot;)
 ]
 
 (link: &quot;Ragazzi / giovani della tua età&quot;)[
 (set: $a2 to &quot;giovani&quot;)
-(set: $CYB to $CYB + 3)
-(set: $PUP to $PUP + 2)
-(set: $PRO to $PRO + 3)
-(set: $PDF to $PDF + 3)
-(set: $CUL to $CUL + 1)
-(set: $TMP to $TMP + 1)
+(set: $cyb to $cyb + 3)
+(set: $pup to $pup + 2)
+(set: $pro to $pro + 3)
+(set: $pdf to $pdf + 3)
+(set: $cul to $cul + 1)
+(set: $tmp to $tmp + 1)
 (goto: &quot;Q3_TS&quot;)
 ]
 
 (link: &quot;Persone con fragilità / disabilità&quot;)[
 (set: $a2 to &quot;fragilita&quot;)
-(set: $EIC to $EIC + 4)
-(set: $UCE to $UCE + 3)
-(set: $GSR to $GSR + 2)
-(set: $TMP to $TMP + 1)
+(set: $eic to $eic + 4)
+(set: $uce to $uce + 3)
+(set: $gsr to $gsr + 2)
+(set: $tmp to $tmp + 1)
 (goto: &quot;Q3_TS&quot;)
 ]
 
 (link: &quot;Comunità / gruppi misti&quot;)[
 (set: $a2 to &quot;comunita&quot;)
-(set: $SRI to $SRI + 2)
-(set: $MSM to $MSM + 2)
-(set: $TMP to $TMP + 2)
-(set: $CUL to $CUL + 2)
-(set: $CYB to $CYB + 2)
-(set: $PUP to $PUP + 2)
-(set: $PRO to $PRO + 2)
-(set: $PDF to $PDF + 2)
-(set: $ALI to $ALI + 2)
+(set: $sri to $sri + 2)
+(set: $msm to $msm + 2)
+(set: $tmp to $tmp + 2)
+(set: $cul to $cul + 2)
+(set: $cyb to $cyb + 2)
+(set: $pup to $pup + 2)
+(set: $pro to $pro + 2)
+(set: $pdf to $pdf + 2)
+(set: $ali to $ali + 2)
 (goto: &quot;Q3_TS&quot;)
 ]</tw-passagedata><tw-passagedata pid="5" name="Q3_TS" tags="" position="100,600" size="100,100">Cosa ti verrebbe naturale fare?
 
 (link: &quot;Sport / movimento / tornei&quot;)[
 (set: $a3 to &quot;sport&quot;)
-(set: $SRI to $SRI + 4)
-(set: $MSM to $MSM + 4)
-(set: $PUP to $PUP + 2)
-(set: $SPSU to $SPSU + 2)
-(set: $OMA to $OMA + 1)
+(set: $sri to $sri + 4)
+(set: $msm to $msm + 4)
+(set: $pup to $pup + 2)
+(set: $spsu to $spsu + 2)
+(set: $oma to $oma + 1)
 (goto: &quot;Q4_TS&quot;)
 ]
 
 (link: &quot;Doposcuola / aiuto compiti&quot;)[
 (set: $a3 to &quot;educazione&quot;)
-(set: $GSR to $GSR + 3)
-(set: $EIC to $EIC + 2)
-(set: $SPSU to $SPSU + 4)
-(set: $OMA to $OMA + 4)
-(set: $UCE to $UCE + 4)
+(set: $gsr to $gsr + 3)
+(set: $eic to $eic + 2)
+(set: $spsu to $spsu + 4)
+(set: $oma to $oma + 4)
+(set: $uce to $uce + 4)
 (goto: &quot;Q4_TS&quot;)
 ]
 
 (link: &quot;Eventi / organizzazione&quot;)[
 (set: $a3 to &quot;eventi&quot;)
-(set: $CUL to $CUL + 4)
-(set: $PDF to $PDF + 3)
-(set: $PUP to $PUP + 2)
-(set: $PRO to $PRO + 1)
-(set: $TMP to $TMP + 1)
+(set: $cul to $cul + 4)
+(set: $pdf to $pdf + 3)
+(set: $pup to $pup + 2)
+(set: $pro to $pro + 1)
+(set: $tmp to $tmp + 1)
 (goto: &quot;Q4_TS&quot;)
 ]
 
 (link: &quot;Social / video / contenuti&quot;)[
 (set: $a3 to &quot;media&quot;)
-(set: $PRO to $PRO + 4)
-(set: $CYB to $CYB + 3)
-(set: $PDF to $PDF + 2)
-(set: $PUP to $PUP + 2)
+(set: $pro to $pro + 4)
+(set: $cyb to $cyb + 3)
+(set: $pdf to $pdf + 2)
+(set: $pup to $pup + 2)
 (goto: &quot;Q4_TS&quot;)
 ]
 
 (link: &quot;Inclusione / temi sociali&quot;)[
 (set: $a3 to &quot;sociale&quot;)
-(set: $TMP to $TMP + 4)
-(set: $EIC to $EIC + 4)
-(set: $GSR to $GSR + 3)
-(set: $UCE to $UCE + 3)
+(set: $tmp to $tmp + 4)
+(set: $eic to $eic + 4)
+(set: $gsr to $gsr + 3)
+(set: $uce to $uce + 3)
 (goto: &quot;Q4_TS&quot;)
 ]
 
 (link: &quot;Ambiente / animali / territorio&quot;)[
 (set: $a3 to &quot;ambiente&quot;)
-(set: $ALI to $ALI + 5)
+(set: $ali to $ali + 5)
 (goto: &quot;Q4_TS&quot;)
 ]</tw-passagedata><tw-passagedata pid="6" name="Q4_TS" tags="" position="100,700" size="100,100">In un gruppo, la tua area di competenza è…
 
 (link: &quot;Dirigere&quot;)[
 (set: $a4 to &quot;front&quot;)
-(set: $SRI to $SRI + 2)
-(set: $MSM to $MSM + 2)
-(set: $PUP to $PUP + 1)
-(set: $SPSU to $SPSU + 1)
-(set: $OMA to $OMA + 1)
+(set: $sri to $sri + 2)
+(set: $msm to $msm + 2)
+(set: $pup to $pup + 1)
+(set: $spsu to $spsu + 1)
+(set: $oma to $oma + 1)
 (goto: &quot;Q5_TS&quot;)
 ]
 
 (link: &quot;Supporto e ascolto&quot;)[
 (set: $a4 to &quot;support&quot;)
-(set: $EIC to $EIC + 2)
-(set: $UCE to $UCE + 2)
-(set: $GSR to $GSR + 2)
-(set: $TMP to $TMP + 1)
+(set: $eic to $eic + 2)
+(set: $uce to $uce + 2)
+(set: $gsr to $gsr + 2)
+(set: $tmp to $tmp + 1)
 (goto: &quot;Q5_TS&quot;)
 ]
 
 (link: &quot;Organizzazione&quot;)[
 (set: $a4 to &quot;organize&quot;)
-(set: $CUL to $CUL + 2)
-(set: $PDF to $PDF + 2)
-(set: $PUP to $PUP + 1)
-(set: $TMP to $TMP + 1)
+(set: $cul to $cul + 2)
+(set: $pdf to $pdf + 2)
+(set: $pup to $pup + 1)
+(set: $tmp to $tmp + 1)
 (goto: &quot;Q5_TS&quot;)
 ]
 
 (link: &quot;Creatività&quot;)[
 (set: $a4 to &quot;creative&quot;)
-(set: $PRO to $PRO + 2)
-(set: $CYB to $CYB + 2)
-(set: $CUL to $CUL + 1)
-(set: $PDF to $PDF + 1)
+(set: $pro to $pro + 2)
+(set: $cyb to $cyb + 2)
+(set: $cul to $cul + 1)
+(set: $pdf to $pdf + 1)
 (goto: &quot;Q5_TS&quot;)
 ]</tw-passagedata><tw-passagedata pid="7" name="Q5_TS" tags="" position="100,800" size="100,100">Che esperienza vuoi?
 
 (link: &quot;Pratica: sul campo&quot;)[
 (set: $a5 to &quot;pratica&quot;)
-(set: $SRI to $SRI + 2)
-(set: $MSM to $MSM + 2)
-(set: $ALI to $ALI + 4)
-(set: $SPSU to $SPSU + 1)
-(set: $OMA to $OMA + 1)
+(set: $sri to $sri + 2)
+(set: $msm to $msm + 2)
+(set: $ali to $ali + 4)
+(set: $spsu to $spsu + 1)
+(set: $oma to $oma + 1)
 (goto: &quot;Risultato_TS&quot;)
 ]
 
 (link: &quot;Relazionale: persone e gruppo&quot;)[
 (set: $a5 to &quot;relazionale&quot;)
-(set: $EIC to $EIC + 2)
-(set: $UCE to $UCE + 2)
-(set: $GSR to $GSR + 1)
-(set: $TMP to $TMP + 1)
+(set: $eic to $eic + 2)
+(set: $uce to $uce + 2)
+(set: $gsr to $gsr + 1)
+(set: $tmp to $tmp + 1)
 (goto: &quot;Risultato_TS&quot;)
 ]
 
 (link: &quot;Creativa: eventi e comunicazione&quot;)[
 (set: $a5 to &quot;creativa&quot;)
-(set: $CUL to $CUL + 2)
-(set: $CYB to $CYB + 2)
-(set: $PRO to $PRO + 2)
-(set: $PDF to $PDF + 2)
-(set: $PUP to $PUP + 1)
+(set: $cul to $cul + 2)
+(set: $cyb to $cyb + 2)
+(set: $pro to $pro + 2)
+(set: $pdf to $pdf + 2)
+(set: $pup to $pup + 1)
 (goto: &quot;Risultato_TS&quot;)
 ]
 
 (link: &quot;Impatto: cittadinanza e sociale&quot;)[
 (set: $a5 to &quot;impatto&quot;)
-(set: $TMP to $TMP + 2)
-(set: $EIC to $EIC + 2)
-(set: $GSR to $GSR + 2)
-(set: $UCE to $UCE + 2)
+(set: $tmp to $tmp + 2)
+(set: $eic to $eic + 2)
+(set: $gsr to $gsr + 2)
+(set: $uce to $uce + 2)
 (goto: &quot;Risultato_TS&quot;)
-]</tw-passagedata><tw-passagedata pid="8" name="Risultato_TS" tags="" position="100,900" size="100,100">(set: _m to (max: $ALI, $SRI, $MSM, $TMP, $CUL, $CYB, $PUP, $PRO, $GSR, $EIC, $PDF, $SPSU, $OMA, $UCE))
+]</tw-passagedata><tw-passagedata pid="8" name="Risultato_TS" tags="" position="100,900" size="100,100">(set: $best to &quot;&quot;)
+
+(set: _m to (max: $ali, $sri, $msm, $tmp, $cul, $cyb, $pup, $pro, $grs, $eir, $pdf, $spsu, $oma, $uce))
 
 (set: $best to (cond:
-_m is $ALI, &quot;ALI&quot;,
-_m is $SRI, &quot;SRI&quot;,
-_m is $MSM, &quot;MSM&quot;,
-_m is $TMP, &quot;TMP&quot;,
-_m is $CUL, &quot;CUL&quot;,
-_m is $CYB, &quot;CYB&quot;,
-_m is $PUP, &quot;PUP&quot;,
-_m is $PRO, &quot;PRO&quot;,
-_m is $GSR, &quot;GSR&quot;,
-_m is $EIC, &quot;EIC&quot;,
-_m is $PDF, &quot;PDF&quot;,
-_m is $SPSU, &quot;SPSU&quot;,
-_m is $OMA, &quot;OMA&quot;,
-true, &quot;UCE&quot;
-))</tw-passagedata><tw-passagedata pid="9" name="UD_Init" tags="" position="300,400" size="100,100">(set: $a2 to &quot;&quot;)
+_m is $ali, &quot;ali&quot;,
+_m is $sri, &quot;sri&quot;,
+_m is $msm, &quot;msm&quot;,
+_m is $tmp, &quot;tmp&quot;,
+_m is $cul, &quot;cul&quot;,
+_m is $cyb, &quot;cyb&quot;,
+_m is $pup, &quot;pup&quot;,
+_m is $pro, &quot;pro&quot;,
+_m is $gsr, &quot;gsr&quot;,
+_m is $eic, &quot;eic&quot;,
+_m is $pdf, &quot;pdf&quot;,
+_m is $spsu, &quot;spsu&quot;,
+_m is $oma, &quot;oma&quot;,
+true, &quot;uce&quot;
+))
+
+(goto: (str: &quot;proj_&quot;, $best))</tw-passagedata><tw-passagedata pid="9" name="UD_Init" tags="" position="300,400" size="100,100">(set: $a2 to &quot;&quot;)
 (set: $a3 to &quot;&quot;)
 (set: $a4 to &quot;&quot;)
 (set: $a5 to &quot;&quot;)
