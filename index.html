@@ -298,7 +298,7 @@ tw-link {
 (set: $g1 to $g1 + 1)
 (set: $g3 to $g3 + 1)
 (set: $g4 to $g4 + 2)
-(set: $g6 to $g6 + 1)
+(set: $g6 to $g6 + 2)
 (goto: &quot;Q3_TS&quot;)
 ]</tw-passagedata><tw-passagedata pid="5" name="Q3_TS" tags="" position="100,600" size="100,100">Cosa ti verrebbe naturale fare?
 
@@ -330,8 +330,8 @@ tw-link {
 
 (link: &quot;Inclusione / temi sociali&quot;)[
 (set: $a3 to &quot;sociale&quot;)
-(set: $g3 to $g3 + 3)
-(set: $g6 to $g6 + 1)
+(set: $g3 to $g3 + 2)
+(set: $g6 to $g6 + 2)
 (goto: &quot;Q4_TS&quot;)
 ]
 
@@ -366,6 +366,7 @@ tw-link {
 (set: $a4 to &quot;creative&quot;)
 (set: $g4 to $g4 + 2)
 (set: $g5 to $g5 + 1)
+(set: $g6 to $g6 + 1)
 (goto: &quot;Q5_TS&quot;)
 ]</tw-passagedata><tw-passagedata pid="7" name="Q5_TS" tags="" position="100,800" size="100,100">Che esperienza vuoi?
 
@@ -479,7 +480,7 @@ tw-link {
 	(goto: &quot;Risultati_TS_cultura&quot;)
 ]
 
-(else:)[
+(else-if: $g6 is _top1v))[
 	(goto: &quot;Risultati_TS_diritti&quot;)
 ]</tw-passagedata><tw-passagedata pid="9" name="UD_Init" tags="" position="300,400" size="100,100">(set: $a2 to &quot;&quot;)
 (set: $a3 to &quot;&quot;)
@@ -1154,7 +1155,7 @@ tw-link {
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="40" name="proj_lpcd" tags="" position="1000,600" size="100,100">&lt;div class=&quot;unlockBox-split&quot;&gt;
   &lt;div class=&quot;left-col&quot;&gt;
     &lt;div class=&quot;unlockBadge&quot;&gt;PROGETTO SBLOCCATO&lt;/div&gt;
-    &lt;img src=&quot;https://raw.githubusercontent.com/infoserviziocivile/SCS2026-quiz/main/43_STILL_La%20persona%20con%20disabilit%C3%A0.jpg&quot; class=&quot;projImage&quot;&gt;
+    &lt;img src=&quot;https://raw.githubusercontent.com/infoserviziocivile/SCS2026-quiz/main/43_STILL_La%20persona%20con%20disabilita.jpg&quot; class=&quot;projImage&quot;&gt;
   &lt;/div&gt;
   &lt;div class=&quot;right-col&quot;&gt;
     &lt;a class=&quot;btnDownload&quot; href=&quot;https://infoserviziocivile.github.io/SCS2026-quiz/scheda-lpcd.PDF&quot; target=&quot;_blank&quot;&gt;SCARICA LA SCHEDA&lt;/a&gt;
@@ -1296,7 +1297,7 @@ tw-link {
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="54" name="proj_psbb" tags="" position="1000,700" size="100,100">&lt;div class=&quot;unlockBox-split&quot;&gt;
   &lt;div class=&quot;left-col&quot;&gt;
     &lt;div class=&quot;unlockBadge&quot;&gt;PROGETTO SBLOCCATO&lt;/div&gt;
-    &lt;img src=&quot;https://raw.githubusercontent.com/infoserviziocivile/SCS2026-quiz/main/26_STILL_Il%20processo%20di%20stregoneria%20e%20i%20bena....jpg&quot; class=&quot;projImage&quot;&gt;
+    &lt;img src=&quot;https://raw.githubusercontent.com/infoserviziocivile/SCS2026-quiz/main/26_%20STILL_Il%20processo%20di%20stregoneria%20e%20i%20benandanti%20a%20Buttrio.jpg&quot; class=&quot;projImage&quot;&gt;
   &lt;/div&gt;
   &lt;div class=&quot;right-col&quot;&gt;
     &lt;a class=&quot;btnDownload&quot; href=&quot;https://infoserviziocivile.github.io/SCS2026-quiz/scheda-psbb.PDF&quot; target=&quot;_blank&quot;&gt;SCARICA LA SCHEDA&lt;/a&gt;
@@ -1706,8 +1707,6 @@ tw-link {
 (link: &quot;A servizio dal Grifone&quot;)[
 (goto: &quot;proj_gri&quot;)
 ]
-(link: &quot;A servizio dal Grifone&quot;)[
-(goto: &quot;proj_gri&quot;)
 ]
 (link: &quot;Radici di pietra&quot;)[
 (goto: &quot;proj_rdp&quot;)
@@ -1808,7 +1807,7 @@ tw-link {
 (link: &quot;ScopriAMO San Martino&quot;)[
 (goto: &quot;proj_ssm&quot;)
 ]
-(link: &quot;Un passo verso il futuro&quot;)[
+(link: &quot;Un passo verso il tuo futuro&quot;)[
 (goto: &quot;proj_upvf&quot;)
 ]
 
