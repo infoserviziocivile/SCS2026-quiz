@@ -9,7 +9,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play SCS2026-quiz.</tw-noscript></noscript></tw-story>
-<tw-storydata name="SCS2026-quiz" startnode="1" creator="Twine" creator-version="2.11.1" format="Harlowe" format-version="3.3.9" ifid="16af1814-d234-4e92-af50-5b8d4e896f12" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P:wght@400;700&display=swap');
+<tw-storydata name="SCS2026-quiz" startnode="1" creator="Twine" creator-version="2.11.1" format="Harlowe" format-version="3.3.9" ifid="145aa211-c646-4810-9d06-6eaf92314ec0" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P:wght@400;700&display=swap');
 
 /* Reset base */
 * { box-sizing: border-box; }
@@ -221,7 +221,19 @@ tw-link {
 
 (link: &quot;Inizia&quot;)[
 (set: $provincia to &quot;&quot;)
-(set: $ambito to &quot;&quot;)
+(set: $a2 to &quot;&quot;)
+(set: $a3 to &quot;&quot;)
+(set: $a4 to &quot;&quot;)
+(set: $a5 to &quot;&quot;)
+
+(set: $g1 to 0)
+(set: $g2 to 0)
+(set: $g3 to 0)
+(set: $g4 to 0)
+(set: $g5 to 0)
+
+(set: $risultati to (a:))
+
 (goto: &quot;Provincia&quot;)
 ]</tw-passagedata><tw-passagedata pid="2" name="Provincia" tags="" position="500,200" size="100,100">In che provincia abiti?
 
@@ -247,837 +259,769 @@ tw-link {
 (set: $a3 to &quot;&quot;)
 (set: $a4 to &quot;&quot;)
 (set: $a5 to &quot;&quot;)
+(set: $g6 to &quot;&quot;)
 
-(set: $ali to 0)  /* Ti regalo nuove ali */
-(set: $sri to 0)  /* Scacco, Rimbalzo e Inclusione */
-(set: $msm to 0)  /* Melara si muove */
-(set: $tmp to 0)  /* The Melting Pot */
-(set: $cul to 0)  /* Culturando! */
-(set: $cyb to 0)  /* Cyber Community */
-(set: $pup to 0)  /* Power Up */
-(set: $pro to 0)  /* Protagonisti noi 2.0 */
-(set: $gsr to 0)  /* Giovani Sinergie Rinnovabili */
-(set: $eic to 0)  /* Energie in Circolo */
-(set: $pdf to 0)  /* Destinazione futuro */
-(set: $spsu to 0)  /* Special summer 2026 */
-(set: $oma to 0)  /* O...MA che oratorio! 2026 */
-(set: $uce to 0)  /* Una Comunità Educante 2026 */
+(set: $g1 to 0)
+(set: $g2 to 0)
+(set: $g3 to 0)
+(set: $g4 to 0)
+(set: $g5 to 0)
+(set: $g6 to 0)
+
+(set: $risultati to (a:))
 
 (goto: &quot;Q2_TS&quot;)</tw-passagedata><tw-passagedata pid="4" name="Q2_TS" tags="" position="100,500" size="100,100">Con chi ti piacerebbe lavorare?
 
 (link: &quot;Bambini / preadolescenti&quot;)[
 (set: $a2 to &quot;bambini&quot;)
-(set: $gsr to $gsr + 3)
-(set: $eic to $eic + 2)
-(set: $spsu to $spsu + 4)
-(set: $oma to $oma + 4)
-(set: $uce to $uce + 4)
+(set: $g1 to $g1 + 1)
+(set: $g3 to $g3 + 1)
+(set: $g4 to $g4 + 2)
 (goto: &quot;Q3_TS&quot;)
 ]
 
 (link: &quot;Ragazzi / giovani della tua età&quot;)[
 (set: $a2 to &quot;giovani&quot;)
-(set: $cyb to $cyb + 3)
-(set: $pup to $pup + 2)
-(set: $pro to $pro + 3)
-(set: $pdf to $pdf + 3)
-(set: $cul to $cul + 1)
-(set: $tmp to $tmp + 1)
+(set: $g4 to $g4 + 3)
+(set: $g5 to $g5 + 1)
 (goto: &quot;Q3_TS&quot;)
 ]
 
 (link: &quot;Persone con fragilità / disabilità&quot;)[
 (set: $a2 to &quot;fragilita&quot;)
-(set: $eic to $eic + 4)
-(set: $uce to $uce + 3)
-(set: $gsr to $gsr + 2)
-(set: $tmp to $tmp + 1)
+(set: $g3 to $g3 + 3)
 (goto: &quot;Q3_TS&quot;)
 ]
 
 (link: &quot;Comunità / gruppi misti&quot;)[
 (set: $a2 to &quot;comunita&quot;)
-(set: $sri to $sri + 2)
-(set: $msm to $msm + 2)
-(set: $tmp to $tmp + 2)
-(set: $cul to $cul + 2)
-(set: $cyb to $cyb + 2)
-(set: $pup to $pup + 2)
-(set: $pro to $pro + 2)
-(set: $pdf to $pdf + 2)
-(set: $ali to $ali + 2)
+(set: $g1 to $g1 + 1)
+(set: $g3 to $g3 + 1)
+(set: $g4 to $g4 + 2)
+(set: $g6 to $g6 + 1)
 (goto: &quot;Q3_TS&quot;)
 ]</tw-passagedata><tw-passagedata pid="5" name="Q3_TS" tags="" position="100,600" size="100,100">Cosa ti verrebbe naturale fare?
 
 (link: &quot;Sport / movimento / tornei&quot;)[
 (set: $a3 to &quot;sport&quot;)
-(set: $sri to $sri + 4)
-(set: $msm to $msm + 4)
-(set: $pup to $pup + 2)
-(set: $spsu to $spsu + 2)
-(set: $oma to $oma + 1)
+(set: $g1 to $g1 + 4)
 (goto: &quot;Q4_TS&quot;)
 ]
 
 (link: &quot;Doposcuola / aiuto compiti&quot;)[
 (set: $a3 to &quot;educazione&quot;)
-(set: $gsr to $gsr + 3)
-(set: $eic to $eic + 2)
-(set: $spsu to $spsu + 4)
-(set: $oma to $oma + 4)
-(set: $uce to $uce + 4)
+(set: $g3 to $g3 + 1)
+(set: $g4 to $g4 + 3)
 (goto: &quot;Q4_TS&quot;)
 ]
 
 (link: &quot;Eventi / organizzazione&quot;)[
 (set: $a3 to &quot;eventi&quot;)
-(set: $cul to $cul + 4)
-(set: $pdf to $pdf + 3)
-(set: $pup to $pup + 2)
-(set: $pro to $pro + 1)
-(set: $tmp to $tmp + 1)
+(set: $g4 to $g4 + 2)
+(set: $g5 to $g5 + 2)
 (goto: &quot;Q4_TS&quot;)
 ]
 
 (link: &quot;Social / video / contenuti&quot;)[
 (set: $a3 to &quot;media&quot;)
-(set: $pro to $pro + 4)
-(set: $cyb to $cyb + 3)
-(set: $pdf to $pdf + 2)
-(set: $pup to $pup + 2)
+(set: $g4 to $g4 + 3)
 (goto: &quot;Q4_TS&quot;)
 ]
 
 (link: &quot;Inclusione / temi sociali&quot;)[
 (set: $a3 to &quot;sociale&quot;)
-(set: $tmp to $tmp + 4)
-(set: $eic to $eic + 4)
-(set: $gsr to $gsr + 3)
-(set: $uce to $uce + 3)
+(set: $g3 to $g3 + 3)
+(set: $g6 to $g6 + 1)
 (goto: &quot;Q4_TS&quot;)
 ]
 
 (link: &quot;Ambiente / animali / territorio&quot;)[
 (set: $a3 to &quot;ambiente&quot;)
-(set: $ali to $ali + 5)
+(set: $g2 to $g2 + 4)
 (goto: &quot;Q4_TS&quot;)
 ]</tw-passagedata><tw-passagedata pid="6" name="Q4_TS" tags="" position="100,700" size="100,100">In un gruppo, la tua area di competenza è…
 
 (link: &quot;Dirigere&quot;)[
 (set: $a4 to &quot;front&quot;)
-(set: $sri to $sri + 2)
-(set: $msm to $msm + 2)
-(set: $pup to $pup + 1)
-(set: $spsu to $spsu + 1)
-(set: $oma to $oma + 1)
+(set: $g1 to $g1 + 2)
+(set: $g4 to $g4 + 1)
 (goto: &quot;Q5_TS&quot;)
 ]
 
 (link: &quot;Supporto e ascolto&quot;)[
 (set: $a4 to &quot;support&quot;)
-(set: $eic to $eic + 2)
-(set: $uce to $uce + 2)
-(set: $gsr to $gsr + 2)
-(set: $tmp to $tmp + 1)
+(set: $g3 to $g3 + 2)
+(set: $g6 to $g6 + 1)
 (goto: &quot;Q5_TS&quot;)
 ]
 
 (link: &quot;Organizzazione&quot;)[
 (set: $a4 to &quot;organize&quot;)
-(set: $cul to $cul + 2)
-(set: $pdf to $pdf + 2)
-(set: $pup to $pup + 1)
-(set: $tmp to $tmp + 1)
+(set: $g4 to $g4 + 1)
+(set: $g5 to $g5 + 2)
 (goto: &quot;Q5_TS&quot;)
 ]
 
 (link: &quot;Creatività&quot;)[
 (set: $a4 to &quot;creative&quot;)
-(set: $pro to $pro + 2)
-(set: $cyb to $cyb + 2)
-(set: $cul to $cul + 1)
-(set: $pdf to $pdf + 1)
+(set: $g4 to $g4 + 2)
+(set: $g5 to $g5 + 1)
 (goto: &quot;Q5_TS&quot;)
 ]</tw-passagedata><tw-passagedata pid="7" name="Q5_TS" tags="" position="100,800" size="100,100">Che esperienza vuoi?
 
 (link: &quot;Pratica: sul campo&quot;)[
 (set: $a5 to &quot;pratica&quot;)
-(set: $sri to $sri + 2)
-(set: $msm to $msm + 2)
-(set: $ali to $ali + 4)
-(set: $spsu to $spsu + 1)
-(set: $oma to $oma + 1)
+(set: $g1 to $g1 + 2)
+(set: $g2 to $g2 + 2)
+(set: $g4 to $g4 + 1)
 (goto: &quot;Risultato_TS&quot;)
 ]
 
 (link: &quot;Relazionale: persone e gruppo&quot;)[
 (set: $a5 to &quot;relazionale&quot;)
-(set: $eic to $eic + 2)
-(set: $uce to $uce + 2)
-(set: $gsr to $gsr + 1)
-(set: $tmp to $tmp + 1)
+(set: $g3 to $g3 + 2)
+(set: $g4 to $g4 + 1)
 (goto: &quot;Risultato_TS&quot;)
 ]
 
 (link: &quot;Creativa: eventi e comunicazione&quot;)[
 (set: $a5 to &quot;creativa&quot;)
-(set: $cul to $cul + 2)
-(set: $cyb to $cyb + 2)
-(set: $pro to $pro + 2)
-(set: $pdf to $pdf + 2)
-(set: $pup to $pup + 1)
+(set: $g4 to $g4 + 1)
+(set: $g5 to $g5 + 2)
 (goto: &quot;Risultato_TS&quot;)
 ]
 
 (link: &quot;Impatto: cittadinanza e sociale&quot;)[
 (set: $a5 to &quot;impatto&quot;)
-(set: $tmp to $tmp + 2)
-(set: $eic to $eic + 2)
-(set: $gsr to $gsr + 2)
-(set: $uce to $uce + 2)
+(set: $g3 to $g3 + 1)
+(set: $g6 to $g6 + 2)
 (goto: &quot;Risultato_TS&quot;)
-]</tw-passagedata><tw-passagedata pid="8" name="Risultato_TS" tags="" position="100,900" size="100,100">(set: $best to &quot;&quot;)
+]</tw-passagedata><tw-passagedata pid="8" name="Risultato_TS" tags="" position="100,900" size="100,100">(set: _top1v to (max: $g1, $g2, $g3, $g4, $g5, $g6))
 
-(set: _m to (max: $ali, $sri, $msm, $tmp, $cul, $cyb, $pup, $pro, $grs, $eir, $pdf, $spsu, $oma, $uce))
+/* PAREGGIO SPORT vs EDUCAZIONE */
+(if: $g1 is _top1v and $g4 is _top1v)[
+(if: $a3 is &quot;sport&quot;)[
+(goto: &quot;Risultati_TS_sport&quot;)
+]
+(else:)[
+(goto: &quot;Risultati_TS_educazione&quot;)
+]
+]
 
-(set: $best to (cond:
-_m is $ali, &quot;ali&quot;,
-_m is $sri, &quot;sri&quot;,
-_m is $msm, &quot;msm&quot;,
-_m is $tmp, &quot;tmp&quot;,
-_m is $cul, &quot;cul&quot;,
-_m is $cyb, &quot;cyb&quot;,
-_m is $pup, &quot;pup&quot;,
-_m is $pro, &quot;pro&quot;,
-_m is $gsr, &quot;gsr&quot;,
-_m is $eic, &quot;eic&quot;,
-_m is $pdf, &quot;pdf&quot;,
-_m is $spsu, &quot;spsu&quot;,
-_m is $oma, &quot;oma&quot;,
-true, &quot;uce&quot;
-))
+/* PAREGGIO ASSISTENZA vs DIRITTI */
+(else-if: $g3 is _top1v and $g6 is _top1v)[
+(if: $a5 is &quot;impatto&quot;)[
+(goto: &quot;Risultati_TS_diritti&quot;)
+]
+	(else:)[
+		(goto: &quot;Risultati_TS_assistenza&quot;)
+	]
+]
 
-(goto: (str: &quot;proj_&quot;, $best))</tw-passagedata><tw-passagedata pid="9" name="UD_Init" tags="" position="300,400" size="100,100">(set: $a2 to &quot;&quot;)
+/* PAREGGIO CULTURA vs EDUCAZIONE */
+(else-if: $g5 is _top1v and $g4 is _top1v)[
+	(if: $a3 is &quot;eventi&quot;)[
+		(goto: &quot;Risultati_TS_cultura&quot;)
+	]
+	(else:)[
+		(goto: &quot;Risultati_TS_educazione&quot;)
+	]
+]
+
+/* PAREGGIO AMBIENTE vs SPORT */
+(else-if: $g2 is _top1v and $g1 is _top1v)[
+	(if: $a3 is &quot;ambiente&quot;)[
+		(goto: &quot;Risultati_TS_ambiente&quot;)
+	]
+	(else:)[
+		(goto: &quot;Risultati_TS_sport&quot;)
+	]
+]
+
+/* PAREGGIO AMBIENTE vs EDUCAZIONE */
+(else-if: $g2 is _top1v and $g4 is _top1v)[
+	(if: $a3 is &quot;ambiente&quot;)[
+		(goto: &quot;Risultati_TS_ambiente&quot;)
+	]
+	(else:)[
+		(goto: &quot;Risultati_TS_educazione&quot;)
+	]
+]
+
+/* PAREGGIO ASSISTENZA vs EDUCAZIONE */
+(else-if: $g3 is _top1v and $g4 is _top1v)[
+	(if: $a5 is &quot;relazionale&quot;)[
+		(goto: &quot;Risultati_TS_assistenza&quot;)
+	]
+	(else:)[
+		(goto: &quot;Risultati_TS_educazione&quot;)
+	]
+]
+
+/* CASI SEMPLICI: UNA CATEGORIA VINCE DA SOLA */
+(else-if: $g1 is _top1v)[
+	(goto: &quot;Risultati_TS_sport&quot;)
+]
+
+(else-if: $g2 is _top1v)[
+	(goto: &quot;Risultati_TS_ambiente&quot;)
+]
+
+(else-if: $g3 is _top1v)[
+	(goto: &quot;Risultati_TS_assistenza&quot;)
+]
+
+(else-if: $g4 is _top1v)[
+	(goto: &quot;Risultati_TS_educazione&quot;)
+]
+
+(else-if: $g5 is _top1v)[
+	(goto: &quot;Risultati_TS_cultura&quot;)
+]
+
+(else:)[
+	(goto: &quot;Risultati_TS_diritti&quot;)
+]</tw-passagedata><tw-passagedata pid="9" name="UD_Init" tags="" position="300,400" size="100,100">(set: $a2 to &quot;&quot;)
 (set: $a3 to &quot;&quot;)
 (set: $a4 to &quot;&quot;)
 (set: $a5 to &quot;&quot;)
 
-(set: $ain to 0)     /* Animare all&#39;incontro */
-(set: $csg to 0)     /* Consumi o scegli? */
-(set: $mat to 0)     /* Maria al Tempio */
-(set: $amp to 0)     /* Amplifica */
-(set: $umadb to 0)   /* Una mano a Don Bosco */
-(set: $lpcd to 0)    /* La persona con disabilità */
-(set: $eas to 0)     /* Estate a Sutrio 2026 */
-(set: $cpls to 0)    /* Cultura per lo sviluppo */
-(set: $oac to 0)     /* Oratorio a colori */
-(set: $ov to 0)      /* Oratorio vivo */
-(set: $gri to 0)     /* A servizio dal Grifone */
-(set: $rdp to 0)     /* Radici di pietra */
-(set: $vptr to 0)    /* Valorizzazione e promozione del territorio comunale 2026 */
-(set: $psbb to 0)    /* Il processo di stregoneria e i Beneandanti a Buttrio */
-(set: $cdf to 0)     /* Cividale del Friuli */
-(set: $ssz to 0)     /* SportivaMente a San Zorz - 2° edizione */
-(set: $vlo to 0)     /* Vivere l’Oratorio 2026 */
-(set: $joy to 0)     /* EnJOY your summer 2026 */
-(set: $smp to 0)     /* SKUPAJ MED POČITNICAMI 10 */
-(set: $s365g to 0)   /* Solidali a 365 gradi */
-(set: $tcn to 0)     /* Talmassons tra cultura e natura */
-(set: $cv to 0)      /* Centro vacanze 2026 */
-(set: $im to 0)      /* InforMajano */
-(set: $mgbc to 0)    /* Mani giovani per il bene comune */
-(set: $snf to 0)     /* Special needs friends */
+(set: $g1 to 0) /* assistenza */
+(set: $g2 to 0) /* educazione */
+(set: $g3 to 0) /* territorio */
+(set: $g4 to 0) /* cultura */
+(set: $g5 to 0) /* diritti */
+(set: $g6 to 0) /* sport */
 
 (goto: &quot;Q2_UD&quot;)</tw-passagedata><tw-passagedata pid="10" name="Q2_UD" tags="" position="300,500" size="100,100">Con chi ti piacerebbe lavorare?
 
 (link: &quot;Bambini / preadolescenti&quot;)[
 (set: $a2 to &quot;bambini&quot;)
-(set: $ain to $ain + 3)
-(set: $mat to $mat + 3)
-(set: $amp to $amp + 2)
-(set: $umadb to $umadb + 3)
-(set: $oac to $oac + 3)
-(set: $ov to $ov + 3)
-(set: $ssz to $ssz + 2)
-(set: $vlo to $vlo + 3)
-(set: $joy to $joy + 3)
-(set: $smp to $smp + 3)
-(set: $cv to $cv + 3)
-(set: $snf to $snf + 2)
+(set: $g1 to $g1 + 1)
+(set: $g2 to $g2 + 3)
+(set: $g6 to $g6 + 1)
 (goto: &quot;Q3_UD&quot;)
 ]
 
 (link: &quot;Ragazzi / giovani della tua età&quot;)[
 (set: $a2 to &quot;giovani&quot;)
-(set: $amp to $amp + 3)
-(set: $csg to $csg + 2)
-(set: $cpls to $cpls + 1)
-(set: $gri to $gri + 2)
-(set: $rdp to $rdp + 2)
-(set: $cdf to $cdf + 2)
-(set: $tcn to $tcn + 1)
-(set: $im to $im + 2)
-(set: $mgbc to $mgbc + 1)
+(set: $g2 to $g2 + 2)
+(set: $g3 to $g3 + 1)
+(set: $g4 to $g4 + 1)
+(set: $g5 to $g5 + 1)
+(set: $g6 to $g6 + 1)
 (goto: &quot;Q3_UD&quot;)
 ]
 
 (link: &quot;Persone con fragilità / disabilità&quot;)[
 (set: $a2 to &quot;fragilita&quot;)
-(set: $lpcd to $lpcd + 4)
-(set: $s365g to $s365g + 3)
-(set: $snf to $snf + 4)
-(set: $ain to $ain + 1)
+(set: $g1 to $g1 + 3)
 (goto: &quot;Q3_UD&quot;)
 ]
 
 (link: &quot;Comunità / gruppi misti&quot;)[
 (set: $a2 to &quot;comunita&quot;)
-(set: $csg to $csg + 2)
-(set: $cpls to $cpls + 2)
-(set: $gri to $gri + 2)
-(set: $rdp to $rdp + 2)
-(set: $vptr to $vptr + 2)
-(set: $tcn to $tcn + 2)
-(set: $mgbc to $mgbc + 2)
-(set: $im to $im + 2)
+(set: $g2 to $g2 + 1)
+(set: $g3 to $g3 + 2)
+(set: $g4 to $g4 + 1)
+(set: $g5 to $g5 + 1)
+(set: $g6 to $g6 + 1)
 (goto: &quot;Q3_UD&quot;)
 ]</tw-passagedata><tw-passagedata pid="11" name="Q3_UD" tags="" position="300,600" size="100,100">Cosa ti verrebbe naturale fare?
 
 (link: &quot;Sport / movimento / tornei&quot;)[
 (set: $a3 to &quot;sport&quot;)
-(set: $ssz to $ssz + 4)
-(set: $joy to $joy + 2)
-(set: $cv to $cv + 2)
-(set: $vlo to $vlo + 1)
-(set: $umadb to $umadb + 1)
+(set: $g6 to $g6 + 4)
 (goto: &quot;Q4_UD&quot;)
 ]
 
 (link: &quot;Doposcuola / aiuto compiti&quot;)[
 (set: $a3 to &quot;educazione&quot;)
-(set: $ain to $ain + 4)
-(set: $mat to $mat + 4)
-(set: $amp to $amp + 3)
-(set: $umadb to $umadb + 3)
-(set: $oac to $oac + 4)
-(set: $ov to $ov + 4)
-(set: $vlo to $vlo + 4)
-(set: $smp to $smp + 3)
-(set: $cv to $cv + 3)
+(set: $g2 to $g2 + 4)
 (goto: &quot;Q4_UD&quot;)
 ]
 
 (link: &quot;Eventi / organizzazione&quot;)[
 (set: $a3 to &quot;eventi&quot;)
-(set: $cpls to $cpls + 4)
-(set: $gri to $gri + 3)
-(set: $psbb to $psbb + 3)
-(set: $cdf to $cdf + 3)
-(set: $tcn to $tcn + 2)
-(set: $im to $im + 2)
-(set: $rdp to $rdp + 2)
+(set: $g3 to $g3 + 1)
+(set: $g4 to $g4 + 3)
 (goto: &quot;Q4_UD&quot;)
 ]
 
 (link: &quot;Social / video / contenuti&quot;)[
 (set: $a3 to &quot;media&quot;)
-(set: $amp to $amp + 3)
-(set: $im to $im + 3)
-(set: $csg to $csg + 2)
-(set: $gri to $gri + 2)
+(set: $g2 to $g2 + 2)
+(set: $g5 to $g5 + 1)
 (goto: &quot;Q4_UD&quot;)
 ]
 
 (link: &quot;Inclusione / temi sociali&quot;)[
 (set: $a3 to &quot;sociale&quot;)
-(set: $lpcd to $lpcd + 3)
-(set: $s365g to $s365g + 4)
-(set: $snf to $snf + 4)
-(set: $ain to $ain + 2)
+(set: $g1 to $g1 + 3)
+(set: $g5 to $g5 + 1)
 (goto: &quot;Q4_UD&quot;)
 ]
 
 (link: &quot;Equo-solidale / sostenibilità&quot;)[
 (set: $a3 to &quot;equo&quot;)
-(set: $csg to $csg + 5)
-(set: $eas to $eas + 2)
-(set: $vptr to $vptr + 2)
-(set: $mgbc to $mgbc + 3)
+(set: $g3 to $g3 + 1)
+(set: $g5 to $g5 + 4)
 (goto: &quot;Q4_UD&quot;)
 ]</tw-passagedata><tw-passagedata pid="12" name="Q4_UD" tags="" position="300,700" size="100,100">In un gruppo, la tua area di competenza è…
 
 (link: &quot;Dirigere&quot;)[
 (set: $a4 to &quot;front&quot;)
-(set: $ain to $ain + 2)
-(set: $mat to $mat + 2)
-(set: $ssz to $ssz + 2)
-(set: $joy to $joy + 1)
-(set: $cv to $cv + 1)
-(set: $vlo to $vlo + 1)
+(set: $g2 to $g2 + 1)
+(set: $g3 to $g3 + 1)
+(set: $g6 to $g6 + 1)
 (goto: &quot;Q5_UD&quot;)
 ]
 
 (link: &quot;Supporto e ascolto&quot;)[
 (set: $a4 to &quot;support&quot;)
-(set: $lpcd to $lpcd + 2)
-(set: $s365g to $s365g + 2)
-(set: $snf to $snf + 2)
-(set: $ain to $ain + 1)
-(set: $mat to $mat + 1)
+(set: $g1 to $g1 + 2)
+(set: $g2 to $g2 + 1)
 (goto: &quot;Q5_UD&quot;)
 ]
 
 (link: &quot;Organizzazione&quot;)[
 (set: $a4 to &quot;organize&quot;)
-(set: $cpls to $cpls + 2)
-(set: $gri to $gri + 2)
-(set: $tcn to $tcn + 2)
-(set: $vptr to $vptr + 1)
-(set: $im to $im + 1)
+(set: $g3 to $g3 + 1)
+(set: $g4 to $g4 + 2)
 (goto: &quot;Q5_UD&quot;)
 ]
 
 (link: &quot;Creatività&quot;)[
 (set: $a4 to &quot;creative&quot;)
-(set: $amp to $amp + 2)
-(set: $csg to $csg + 2)
-(set: $cpls to $cpls + 1)
-(set: $psbb to $psbb + 1)
+(set: $g2 to $g2 + 1)
+(set: $g4 to $g4 + 1)
+(set: $g5 to $g5 + 2)
 (goto: &quot;Q5_UD&quot;)
 ]</tw-passagedata><tw-passagedata pid="13" name="Q5_UD" tags="" position="300,800" size="100,100">Che esperienza vuoi?
 
 (link: &quot;Pratica: sul campo&quot;)[
 (set: $a5 to &quot;pratica&quot;)
-(set: $eas to $eas + 2)
-(set: $vptr to $vptr + 2)
-(set: $mgbc to $mgbc + 4)
-(set: $ssz to $ssz + 2)
-(set: $joy to $joy + 1)
+(set: $g3 to $g3 + 2)
+(set: $g6 to $g6 + 2)
+(set: $g2 to $g2 + 1)
 (goto: &quot;Risultato_UD&quot;)
 ]
 
 (link: &quot;Relazionale: persone e gruppo&quot;)[
 (set: $a5 to &quot;relazionale&quot;)
-(set: $lpcd to $lpcd + 2)
-(set: $s365g to $s365g + 2)
-(set: $snf to $snf + 2)
-(set: $ain to $ain + 1)
-(set: $mat to $mat + 1)
-(set: $umadb to $umadb + 1)
+(set: $g1 to $g1 + 2)
+(set: $g2 to $g2 + 1)
 (goto: &quot;Risultato_UD&quot;)
 ]
 
 (link: &quot;Creativa: eventi e comunicazione&quot;)[
 (set: $a5 to &quot;creativa&quot;)
-(set: $amp to $amp + 2)
-(set: $cpls to $cpls + 2)
-(set: $csg to $csg + 2)
-(set: $gri to $gri + 1)
-(set: $im to $im + 1)
+(set: $g4 to $g4 + 2)
+(set: $g5 to $g5 + 1)
 (goto: &quot;Risultato_UD&quot;)
 ]
 
 (link: &quot;Impatto: cittadinanza e sociale&quot;)[
 (set: $a5 to &quot;impatto&quot;)
-(set: $csg to $csg + 2)
-(set: $mgbc to $mgbc + 2)
-(set: $s365g to $s365g + 2)
-(set: $snf to $snf + 1)
+(set: $g1 to $g1 + 1)
+(set: $g3 to $g3 + 1)
+(set: $g5 to $g5 + 2)
 (goto: &quot;Risultato_UD&quot;)
-]</tw-passagedata><tw-passagedata pid="14" name="Risultato_UD" tags="" position="300,900" size="100,100">(set: $best to &quot;&quot;)
+]</tw-passagedata><tw-passagedata pid="14" name="Risultato_UD" tags="" position="300,900" size="100,100">(set: _top1v to (max: $g1, $g2, $g3, $g4, $g5, $g6))
 
-(set: _m to (max:
-$ain, $csg, $mat, $amp, $umadb, $lpcd, $eas, $cpls, $oac, $ov,
-$gri, $rdp, $vptr, $psbb, $cdf, $ssz, $vlo, $joy, $smp, $s365g,
-$tcn, $cv, $im, $mgbc, $snf
-))
+/* PAREGGIO SPORT vs EDUCAZIONE */
+(if: $g6 is _top1v and $g2 is _top1v)[
+	(if: $a3 is &quot;sport&quot;)[
+		(goto: &quot;Risultati_UD_sport&quot;)
+	]
+	(else:)[
+		(goto: &quot;Risultati_UD_educazione&quot;)
+	]
+]
 
-(set: $best to (cond:
-_m is $ain, &quot;ain&quot;,
-_m is $csg, &quot;csg&quot;,
-_m is $mat, &quot;mat&quot;,
-_m is $amp, &quot;amp&quot;,
-_m is $umadb, &quot;umadb&quot;,
-_m is $lpcd, &quot;lpcd&quot;,
-_m is $eas, &quot;eas&quot;,
-_m is $cpls, &quot;cpls&quot;,
-_m is $oac, &quot;oac&quot;,
-_m is $ov, &quot;ov&quot;,
-_m is $gri, &quot;gri&quot;,
-_m is $rdp, &quot;rdp&quot;,
-_m is $vptr, &quot;vptr&quot;,
-_m is $psbb, &quot;psbb&quot;,
-_m is $cdf, &quot;cdf&quot;,
-_m is $ssz, &quot;ssz&quot;,
-_m is $vlo, &quot;vlo&quot;,
-_m is $joy, &quot;joy&quot;,
-_m is $smp, &quot;smp&quot;,
-_m is $s365g, &quot;s365g&quot;,
-_m is $tcn, &quot;tcn&quot;,
-_m is $cv, &quot;cv&quot;,
-_m is $im, &quot;im&quot;,
-_m is $mgbc, &quot;mgbc&quot;,
-true, &quot;snf&quot;
-))
+/* PAREGGIO ASSISTENZA vs DIRITTI */
+(else-if: $g1 is _top1v and $g5 is _top1v)[
+	(if: $a5 is &quot;impatto&quot;)[
+		(goto: &quot;Risultati_UD_diritti&quot;)
+	]
+	(else:)[
+		(goto: &quot;Risultati_UD_assistenza&quot;)
+	]
+]
 
-(goto: (str: &quot;proj_&quot;, $best))</tw-passagedata><tw-passagedata pid="15" name="PN_Init" tags="" position="500,400" size="100,100">(set: $a2 to &quot;&quot;)
+/* PAREGGIO EDUCAZIONE vs CULTURA */
+(else-if: $g2 is _top1v and $g4 is _top1v)[
+	(if: $a3 is &quot;eventi&quot;)[
+		(goto: &quot;Risultati_UD_cultura&quot;)
+	]
+	(else:)[
+		(goto: &quot;Risultati_UD_educazione&quot;)
+	]
+]
+
+/* PAREGGIO TERRITORIO vs DIRITTI */
+(else-if: $g3 is _top1v and $g5 is _top1v)[
+	(if: $a3 is &quot;equo&quot;)[
+		(goto: &quot;Risultati_UD_diritti&quot;)
+	]
+	(else:)[
+		(goto: &quot;Risultati_UD_territorio&quot;)
+	]
+]
+
+/* PAREGGIO EDUCAZIONE vs TERRITORIO */
+(else-if: $g2 is _top1v and $g3 is _top1v)[
+	(if: $a3 is &quot;educazione&quot;)[
+		(goto: &quot;Risultati_UD_educazione&quot;)
+	]
+	(else-if: $a3 is &quot;sport&quot;)[
+		(goto: &quot;Risultati_UD_sport&quot;)
+	]
+	(else:)[
+		(goto: &quot;Risultati_UD_territorio&quot;)
+	]
+]
+
+/* CASI SEMPLICI */
+(else-if: $g6 is _top1v)[
+	(goto: &quot;Risultati_UD_sport&quot;)
+]
+
+(else-if: $g1 is _top1v)[
+	(goto: &quot;Risultati_UD_assistenza&quot;)
+]
+
+(else-if: $g2 is _top1v)[
+	(goto: &quot;Risultati_UD_educazione&quot;)
+]
+
+(else-if: $g3 is _top1v)[
+	(goto: &quot;Risultati_UD_territorio&quot;)
+]
+
+(else-if: $g4 is _top1v)[
+	(goto: &quot;Risultati_UD_cultura&quot;)
+]
+
+(else:)[
+	(goto: &quot;Risultati_UD_diritti&quot;)
+]</tw-passagedata><tw-passagedata pid="15" name="PN_Init" tags="" position="500,400" size="100,100">(set: $a2 to &quot;&quot;)
 (set: $a3 to &quot;&quot;)
 (set: $a4 to &quot;&quot;)
 (set: $a5 to &quot;&quot;)
 
-(set: $spv to 0)   /* Sport... palestra di vita */
-(set: $ssm to 0)   /* ScopriAMO San Martino */
-(set: $upvf to 0)  /* Un passo verso il futuro */
-(set: $bii to 0)   /* Biblioteca Innovativa d&#39;Istituto */
-(set: $sfd to 0)   /* Il sogno che si fa dono */
-(set: $ne to 0)    /* Nessuno escluso: facilitatori digitali a Brugnera */
+(set: $g1 to 0) /* assistenza */
+(set: $g2 to 0) /* educazione */
+(set: $g3 to 0) /* cultura */
+(set: $g4 to 0) /* sport */
 
 (goto: &quot;Q2_PN&quot;)</tw-passagedata><tw-passagedata pid="16" name="Q2_PN" tags="" position="500,500" size="100,100">Con chi ti piacerebbe lavorare?
 
 (link: &quot;Bambini / preadolescenti&quot;)[
 (set: $a2 to &quot;bambini&quot;)
-(set: $spv to $spv + 2)
-(set: $ssm to $ssm + 3)
-(set: $upvf to $upvf + 3)
-(set: $bii to $bii + 2)
-(set: $sfd to $sfd + 2)
+(set: $g1 to $g1 + 1)
+(set: $g2 to $g2 + 3)
+(set: $g4 to $g4 + 1)
 (goto: &quot;Q3_PN&quot;)
 ]
 
 (link: &quot;Ragazzi / giovani della tua età&quot;)[
 (set: $a2 to &quot;giovani&quot;)
-(set: $spv to $spv + 2)
-(set: $upvf to $upvf + 3)
-(set: $bii to $bii + 2)
-(set: $ne to $ne + 2)
+(set: $g2 to $g2 + 2)
+(set: $g3 to $g3 + 1)
+(set: $g4 to $g4 + 1)
 (goto: &quot;Q3_PN&quot;)
 ]
 
 (link: &quot;Persone con fragilità / disabilità&quot;)[
 (set: $a2 to &quot;fragilita&quot;)
-(set: $sfd to $sfd + 4)
-(set: $ne to $ne + 4)
-(set: $upvf to $upvf + 1)
+(set: $g1 to $g1 + 3)
 (goto: &quot;Q3_PN&quot;)
 ]
 
 (link: &quot;Comunità / gruppi misti&quot;)[
 (set: $a2 to &quot;comunita&quot;)
-(set: $spv to $spv + 2)
-(set: $ssm to $ssm + 2)
-(set: $upvf to $upvf + 2)
-(set: $bii to $bii + 2)
-(set: $ne to $ne + 2)
+(set: $g2 to $g2 + 2)
+(set: $g3 to $g3 + 1)
+(set: $g4 to $g4 + 1)
 (goto: &quot;Q3_PN&quot;)
 ]</tw-passagedata><tw-passagedata pid="17" name="Q5_PN" tags="" position="500,800" size="100,100">Che esperienza vuoi?
 
 (link: &quot;Pratica: sul campo&quot;)[
 (set: $a5 to &quot;pratica&quot;)
-(set: $spv to $spv + 2)
-(set: $ssm to $ssm + 2)
-(set: $sfd to $sfd + 1)
+(set: $g2 to $g2 + 1)
+(set: $g4 to $g4 + 2)
 (goto: &quot;Risultato_PN&quot;)
 ]
 
 (link: &quot;Relazionale: persone e gruppo&quot;)[
 (set: $a5 to &quot;relazionale&quot;)
-(set: $sfd to $sfd + 2)
-(set: $ne to $ne + 2)
-(set: $upvf to $upvf + 1)
+(set: $g1 to $g1 + 2)
+(set: $g2 to $g2 + 1)
 (goto: &quot;Risultato_PN&quot;)
 ]
 
 (link: &quot;Creativa: eventi e comunicazione&quot;)[
 (set: $a5 to &quot;creativa&quot;)
-(set: $bii to $bii + 2)
-(set: $ssm to $ssm + 2)
-(set: $ne to $ne + 1)
+(set: $g2 to $g2 + 1)
+(set: $g3 to $g3 + 2)
 (goto: &quot;Risultato_PN&quot;)
 ]
 
 (link: &quot;Impatto: cittadinanza e sociale&quot;)[
 (set: $a5 to &quot;impatto&quot;)
-(set: $sfd to $sfd + 2)
-(set: $ne to $ne + 2)
-(set: $upvf to $upvf + 2)
+(set: $g1 to $g1 + 2)
+(set: $g2 to $g2 + 1)
 (goto: &quot;Risultato_PN&quot;)
 ]</tw-passagedata><tw-passagedata pid="18" name="Q4_PN" tags="" position="500,700" size="100,100">In un gruppo, la tua area di competenza è…
 
 (link: &quot;Dirigere&quot;)[
 (set: $a4 to &quot;front&quot;)
-(set: $spv to $spv + 2)
-(set: $ssm to $ssm + 2)
-(set: $upvf to $upvf + 1)
+(set: $g2 to $g2 + 1)
+(set: $g4 to $g4 + 2)
 (goto: &quot;Q5_PN&quot;)
 ]
 
 (link: &quot;Supporto e ascolto&quot;)[
 (set: $a4 to &quot;support&quot;)
-(set: $sfd to $sfd + 2)
-(set: $ne to $ne + 2)
-(set: $upvf to $upvf + 1)
+(set: $g1 to $g1 + 2)
+(set: $g2 to $g2 + 1)
 (goto: &quot;Q5_PN&quot;)
 ]
 
 (link: &quot;Organizzazione&quot;)[
 (set: $a4 to &quot;organize&quot;)
-(set: $ssm to $ssm + 2)
-(set: $bii to $bii + 2)
-(set: $spv to $spv + 1)
+(set: $g2 to $g2 + 1)
+(set: $g3 to $g3 + 2)
 (goto: &quot;Q5_PN&quot;)
 ]
 
 (link: &quot;Creatività&quot;)[
 (set: $a4 to &quot;creative&quot;)
-(set: $ne to $ne + 2)
-(set: $bii to $bii + 1)
-(set: $upvf to $upvf + 1)
+(set: $g2 to $g2 + 1)
+(set: $g3 to $g3 + 1)
 (goto: &quot;Q5_PN&quot;)
 ]</tw-passagedata><tw-passagedata pid="19" name="Q3_PN" tags="" position="500,600" size="100,100">Cosa ti verrebbe naturale fare?
 
 (link: &quot;Sport / movimento / tornei&quot;)[
 (set: $a3 to &quot;sport&quot;)
-(set: $spv to $spv + 5)
-(set: $ssm to $ssm + 2)
+(set: $g4 to $g4 + 4)
+(set: $g2 to $g2 + 1)
 (goto: &quot;Q4_PN&quot;)
 ]
 
 (link: &quot;Doposcuola / aiuto compiti&quot;)[
 (set: $a3 to &quot;educazione&quot;)
-(set: $upvf to $upvf + 4)
-(set: $bii to $bii + 4)
-(set: $ssm to $ssm + 2)
+(set: $g2 to $g2 + 4)
 (goto: &quot;Q4_PN&quot;)
 ]
 
 (link: &quot;Eventi / organizzazione&quot;)[
 (set: $a3 to &quot;eventi&quot;)
-(set: $ssm to $ssm + 4)
-(set: $bii to $bii + 2)
-(set: $spv to $spv + 1)
+(set: $g2 to $g2 + 1)
+(set: $g3 to $g3 + 2)
 (goto: &quot;Q4_PN&quot;)
 ]
 
 (link: &quot;Social / video / contenuti&quot;)[
 (set: $a3 to &quot;media&quot;)
-(set: $ne to $ne + 4)
-(set: $upvf to $upvf + 2)
-(set: $bii to $bii + 1)
+(set: $g1 to $g1 + 1)
+(set: $g2 to $g2 + 1)
 (goto: &quot;Q4_PN&quot;)
 ]
 
 (link: &quot;Inclusione / temi sociali&quot;)[
 (set: $a3 to &quot;sociale&quot;)
-(set: $sfd to $sfd + 4)
-(set: $ne to $ne + 4)
-(set: $upvf to $upvf + 2)
+(set: $g1 to $g1 + 3)
 (goto: &quot;Q4_PN&quot;)
 ]
 
 (link: &quot;Cultura / libri / biblioteca&quot;)[
 (set: $a3 to &quot;cultura&quot;)
-(set: $bii to $bii + 5)
-(set: $ssm to $ssm + 1)
+(set: $g3 to $g3 + 4)
 (goto: &quot;Q4_PN&quot;)
-]</tw-passagedata><tw-passagedata pid="20" name="Risultato_PN" tags="" position="500,900" size="100,100">(set: $best to &quot;&quot;)
+]</tw-passagedata><tw-passagedata pid="20" name="Risultato_PN" tags="" position="500,900" size="100,100">(set: _top1v to (max: $g1, $g2, $g3, $g4))
 
-(set: _m to (max:
-$spv, $ssm, $upvf, $bii, $sfd, $ne
-))
+/* PAREGGIO SPORT vs EDUCAZIONE */
+(if: $g4 is _top1v and $g2 is _top1v)[
+	(if: $a3 is &quot;sport&quot;)[
+		(goto: &quot;Risultati_PN_sport&quot;)
+	]
+	(else:)[
+		(goto: &quot;Risultati_PN_educazione&quot;)
+	]
+]
 
-(set: $best to (cond:
-_m is $spv, &quot;spv&quot;,
-_m is $ssm, &quot;ssm&quot;,
-_m is $upvf, &quot;upvf&quot;,
-_m is $bii, &quot;bii&quot;,
-_m is $sfd, &quot;sfd&quot;,
-true, &quot;ne&quot;
-))
+/* PAREGGIO EDUCAZIONE vs CULTURA */
+(else-if: $g2 is _top1v and $g3 is _top1v)[
+	(if: $a3 is &quot;cultura&quot;)[
+		(goto: &quot;Risultati_PN_cultura&quot;)
+	]
+	(else:)[
+		(goto: &quot;Risultati_PN_educazione&quot;)
+	]
+]
 
-(goto: (str: &quot;proj_&quot;, $best))</tw-passagedata><tw-passagedata pid="21" name="GO_Init" tags="" position="700,400" size="100,100">(set: $a2 to &quot;&quot;)
+/* PAREGGIO ASSISTENZA vs EDUCAZIONE */
+(else-if: $g1 is _top1v and $g2 is _top1v)[
+	(if: $a5 is &quot;relazionale&quot;)[
+		(goto: &quot;Risultati_PN_assistenza&quot;)
+	]
+	(else:)[
+		(goto: &quot;Risultati_PN_educazione&quot;)
+	]
+]
+
+/* CASI SEMPLICI */
+(else-if: $g1 is _top1v)[
+	(goto: &quot;Risultati_PN_assistenza&quot;)
+]
+
+(else-if: $g2 is _top1v)[
+	(goto: &quot;Risultati_PN_educazione&quot;)
+]
+
+(else-if: $g3 is _top1v)[
+	(goto: &quot;Risultati_PN_cultura&quot;)
+]
+
+(else:)[
+	(goto: &quot;Risultati_PN_sport&quot;)
+]</tw-passagedata><tw-passagedata pid="21" name="GO_Init" tags="" position="700,400" size="100,100">(set: $a2 to &quot;&quot;)
 (set: $a3 to &quot;&quot;)
 (set: $a4 to &quot;&quot;)
 (set: $a5 to &quot;&quot;)
 
-(set: $rin to 0)   /* RinnovaMenti */
-(set: $rdc to 0)   /* Reti di cultura */
-(set: $es to 0)    /* Estate da sfogliare Villesse */
-(set: $esR to 0)   /* Estate da sfogliare Ronchi dei Legionari */
-(set: $pde to 0)   /* Pagine d’estate. In biblioteca, insieme – Grado */
-(set: $tdl to 0)   /* Tempo di libri – Romans d’Isonzo */
-(set: $gel to 0)   /* Tra generazioni e libri – Romans d’Isonzo */
+(set: $g1 to 0) /* assistenza */
+(set: $g2 to 0) /* educazione */
+(set: $g3 to 0) /* cultura */
 
 (goto: &quot;Q2_GO&quot;)</tw-passagedata><tw-passagedata pid="22" name="Q2_GO" tags="" position="700,500" size="100,100">Con chi ti piacerebbe lavorare?
 
 (link: &quot;Bambini / preadolescenti&quot;)[
 (set: $a2 to &quot;bambini&quot;)
-(set: $rin to $rin + 4)
-(set: $es to $es + 3)
-(set: $esR to $esR + 3)
-(set: $pde to $pde + 3)
-(set: $tdl to $tdl + 2)
-(set: $gel to $gel + 2)
+(set: $g2 to $g2 + 3)
+(set: $g1 to $g1 + 1)
 (goto: &quot;Q3_GO&quot;)
 ]
 
-(link: &quot;Ragazzi / giovani della tua età&quot;)[
+(link: &quot;Ragazzi / giovani&quot;)[
 (set: $a2 to &quot;giovani&quot;)
-(set: $rin to $rin + 3)
-(set: $rdc to $rdc + 2)
-(set: $es to $es + 2)
-(set: $esR to $esR + 2)
-(set: $pde to $pde + 2)
+(set: $g2 to $g2 + 3)
+(set: $g3 to $g3 + 1)
 (goto: &quot;Q3_GO&quot;)
 ]
 
-(link: &quot;Persone con fragilità / disabilità&quot;)[
+(link: &quot;Persone con fragilità&quot;)[
 (set: $a2 to &quot;fragilita&quot;)
-(set: $rin to $rin + 4)
-(set: $gel to $gel + 2)
+(set: $g1 to $g1 + 3)
 (goto: &quot;Q3_GO&quot;)
 ]
 
-(link: &quot;Comunità / gruppi misti&quot;)[
+(link: &quot;Comunità&quot;)[
 (set: $a2 to &quot;comunita&quot;)
-(set: $rdc to $rdc + 3)
-(set: $pde to $pde + 2)
-(set: $tdl to $tdl + 2)
-(set: $gel to $gel + 3)
-(set: $es to $es + 1)
-(set: $esR to $esR + 1)
+(set: $g1 to $g1 + 1)
+(set: $g2 to $g2 + 2)
+(set: $g3 to $g3 + 1)
 (goto: &quot;Q3_GO&quot;)
 ]</tw-passagedata><tw-passagedata pid="23" name="Q4_GO" tags="" position="700,700" size="100,100">In un gruppo, la tua area di competenza è…
 
-(link: &quot;Dirigere&quot;)[
-(set: $a4 to &quot;front&quot;)
-(set: $rin to $rin + 2)
-(set: $es to $es + 1)
-(set: $esR to $esR + 1)
-(goto: &quot;Q5_GO&quot;)
-]
-
 (link: &quot;Supporto e ascolto&quot;)[
 (set: $a4 to &quot;support&quot;)
-(set: $rin to $rin + 2)
-(set: $gel to $gel + 2)
-(set: $pde to $pde + 1)
+(set: $g1 to $g1 + 2)
 (goto: &quot;Q5_GO&quot;)
 ]
 
 (link: &quot;Organizzazione&quot;)[
 (set: $a4 to &quot;organize&quot;)
-(set: $rdc to $rdc + 2)
-(set: $es to $es + 2)
-(set: $esR to $esR + 2)
-(set: $tdl to $tdl + 1)
+(set: $g2 to $g2 + 1)
+(set: $g3 to $g3 + 2)
 (goto: &quot;Q5_GO&quot;)
 ]
 
 (link: &quot;Creatività&quot;)[
 (set: $a4 to &quot;creative&quot;)
-(set: $rdc to $rdc + 2)
-(set: $pde to $pde + 1)
-(set: $tdl to $tdl + 1)
+(set: $g2 to $g2 + 1)
+(set: $g3 to $g3 + 2)
 (goto: &quot;Q5_GO&quot;)
 ]</tw-passagedata><tw-passagedata pid="24" name="Q3_GO" tags="" position="700,600" size="100,100">Cosa ti verrebbe naturale fare?
 
-(link: &quot;Sport / movimento / tornei&quot;)[
-(set: $a3 to &quot;sport&quot;)
-(set: $rin to $rin + 2)
-(goto: &quot;Q4_GO&quot;)
-]
-
-(link: &quot;Doposcuola / aiuto compiti&quot;)[
+(link: &quot;Doposcuola / educazione&quot;)[
 (set: $a3 to &quot;educazione&quot;)
-(set: $rin to $rin + 4)
-(set: $pde to $pde + 2)
-(set: $tdl to $tdl + 2)
-(set: $gel to $gel + 2)
+(set: $g2 to $g2 + 4)
 (goto: &quot;Q4_GO&quot;)
 ]
 
-(link: &quot;Eventi / organizzazione&quot;)[
-(set: $a3 to &quot;eventi&quot;)
-(set: $rdc to $rdc + 4)
-(set: $es to $es + 3)
-(set: $esR to $esR + 3)
-(set: $pde to $pde + 2)
-(goto: &quot;Q4_GO&quot;)
-]
-
-(link: &quot;Social / video / contenuti&quot;)[
-(set: $a3 to &quot;media&quot;)
-(set: $rdc to $rdc + 2)
-(set: $rin to $rin + 1)
-(goto: &quot;Q4_GO&quot;)
-]
-
-(link: &quot;Inclusione / temi sociali&quot;)[
+(link: &quot;Inclusione / supporto&quot;)[
 (set: $a3 to &quot;sociale&quot;)
-(set: $rin to $rin + 4)
-(set: $gel to $gel + 2)
+(set: $g1 to $g1 + 3)
 (goto: &quot;Q4_GO&quot;)
 ]
 
-(link: &quot;Cultura / libri / biblioteca&quot;)[
+(link: &quot;Biblioteche, cultura, libri&quot;)[ 
 (set: $a3 to &quot;cultura&quot;)
-(set: $rdc to $rdc + 4)
-(set: $es to $es + 4)
-(set: $esR to $esR + 4)
-(set: $pde to $pde + 4)
-(set: $tdl to $tdl + 4)
-(set: $gel to $gel + 4)
+(set: $g3 to $g3 + 4)
+(goto: &quot;Q4_GO&quot;)
+]
+
+(link: &quot;Attività con la comunità&quot;)[
+(set: $a3 to &quot;comunita&quot;)
+(set: $g1 to $g1 + 1)
+(set: $g2 to $g2 + 2)
 (goto: &quot;Q4_GO&quot;)
 ]</tw-passagedata><tw-passagedata pid="25" name="Q5_GO" tags="" position="700,800" size="100,100">Che esperienza vuoi?
 
-(link: &quot;Pratica: sul campo&quot;)[
-(set: $a5 to &quot;pratica&quot;)
-(set: $rin to $rin + 2)
-(set: $es to $es + 1)
-(set: $esR to $esR + 1)
-(goto: &quot;Risultato_GO&quot;)
-]
-
-(link: &quot;Relazionale: persone e gruppo&quot;)[
+(link: &quot;Relazionale&quot;)[
 (set: $a5 to &quot;relazionale&quot;)
-(set: $rin to $rin + 2)
-(set: $gel to $gel + 2)
-(set: $pde to $pde + 1)
+(set: $g1 to $g1 + 2)
+(set: $g2 to $g2 + 1)
 (goto: &quot;Risultato_GO&quot;)
 ]
 
-(link: &quot;Creativa: eventi e comunicazione&quot;)[
+(link: &quot;Educativa&quot;)[
+(set: $a5 to &quot;educativa&quot;)
+(set: $g2 to $g2 + 2)
+(goto: &quot;Risultato_GO&quot;)
+]
+
+(link: &quot;Creativa&quot;)[
 (set: $a5 to &quot;creativa&quot;)
-(set: $rdc to $rdc + 2)
-(set: $es to $es + 1)
-(set: $esR to $esR + 1)
-(set: $pde to $pde + 1)
+(set: $g3 to $g3 + 2)
 (goto: &quot;Risultato_GO&quot;)
+]</tw-passagedata><tw-passagedata pid="26" name="Risultato_GO" tags="" position="700,900" size="100,100">(set: _top1v to (max: $g1, $g2, $g3))
+
+/* PAREGGIO ASSISTENZA vs EDUCAZIONE */
+(if: $g1 is _top1v and $g2 is _top1v)[
+	(if: $a3 is &quot;educazione&quot;)[
+		(goto: &quot;Risultati_GO_educazione&quot;)
+	]
+	(else:)[
+		(goto: &quot;Risultati_GO_assistenza&quot;)
+	]
 ]
 
-(link: &quot;Impatto: cittadinanza e sociale&quot;)[
-(set: $a5 to &quot;impatto&quot;)
-(set: $rin to $rin + 2)
-(set: $gel to $gel + 2)
-(set: $rdc to $rdc + 1)
-(goto: &quot;Risultato_GO&quot;)
-]</tw-passagedata><tw-passagedata pid="26" name="Risultato_GO" tags="" position="700,900" size="100,100">(set: $best to &quot;&quot;)
+/* PAREGGIO EDUCAZIONE vs CULTURA */
+(else-if: $g2 is _top1v and $g3 is _top1v)[
+	(if: $a3 is &quot;eventi&quot;)[
+		(goto: &quot;Risultati_GO_cultura&quot;)
+	]
+	(else:)[
+		(goto: &quot;Risultati_GO_educazione&quot;)
+	]
+]
 
-(set: _m to (max:
-$rin, $rdc, $es, $esR, $pde, $tdl, $gel
-))
+/* CASI SEMPLICI */
+(else-if: $g1 is _top1v)[
+	(goto: &quot;Risultati_GO_assistenza&quot;)
+]
 
-(set: $best to (cond:
-_m is $rin, &quot;rin&quot;,
-_m is $rdc, &quot;rdc&quot;,
-_m is $es, &quot;es&quot;,
-_m is $esR, &quot;esR&quot;,
-_m is $pde, &quot;pde&quot;,
-_m is $tdl, &quot;tdl&quot;,
-true, &quot;gel&quot;
-))
+(else-if: $g2 is _top1v)[
+	(goto: &quot;Risultati_GO_educazione&quot;)
+]
 
-(goto: (str: &quot;proj_&quot;, $best))</tw-passagedata><tw-passagedata pid="27" name="proj_ali" tags="" position="1000,400" size="100,100">&lt;div class=&quot;unlockBox-split&quot;&gt;
+(else:)[
+	(goto: &quot;Risultati_GO_cultura&quot;)
+]</tw-passagedata><tw-passagedata pid="27" name="proj_ali" tags="" position="1000,400" size="100,100">&lt;div class=&quot;unlockBox-split&quot;&gt;
   &lt;div class=&quot;left-col&quot;&gt;
     &lt;div class=&quot;unlockBadge&quot;&gt;PROGETTO SBLOCCATO&lt;/div&gt;
     &lt;img src=&quot;https://raw.githubusercontent.com/infoserviziocivile/SCS2026-quiz/main/53_STILL_Ti%20regalo%20nuove%20ali.jpg&quot; class=&quot;projImage&quot;&gt;
@@ -1260,7 +1204,7 @@ true, &quot;gel&quot;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="45" name="proj_uce" tags="" position="1400,500" size="100,100">&lt;div class=&quot;unlockBox-split&quot;&gt;
   &lt;div class=&quot;left-col&quot;&gt;
     &lt;div class=&quot;unlockBadge&quot;&gt;PROGETTO SBLOCCATO&lt;/div&gt;
-    &lt;img src=&quot;https://raw.githubusercontent.com/infoserviziocivile/SCS2026-quiz/main/8_STILL_Una%20comunit%C3%A0%20educante.jpg&quot; class=&quot;projImage&quot;&gt;
+    &lt;img src=&quot;https://raw.githubusercontent.com/infoserviziocivile/SCS2026-quiz/main/8_%20STILL_Una%20comunita%20educante.jpg&quot; class=&quot;projImage&quot;&gt;
   &lt;/div&gt;
   &lt;div class=&quot;right-col&quot;&gt;
     &lt;a class=&quot;btnDownload&quot; href=&quot;https://infoserviziocivile.github.io/SCS2026-quiz/scheda-uce.pdf&quot; target=&quot;_blank&quot;&gt;SCARICA LA SCHEDA&lt;/a&gt;
@@ -1301,7 +1245,7 @@ true, &quot;gel&quot;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="49" name="proj_cpls" tags="" position="1300,600" size="100,100">&lt;div class=&quot;unlockBox-split&quot;&gt;
   &lt;div class=&quot;left-col&quot;&gt;
     &lt;div class=&quot;unlockBadge&quot;&gt;PROGETTO SBLOCCATO&lt;/div&gt;
-    &lt;img src=&quot;https://raw.githubusercontent.com/infoserviziocivile/SCS2026-quiz/main/24_STILL_Cultura%20per%20lo%20sviluppo.jpg&quot; class=&quot;projImage&quot;&gt;
+    &lt;img src=&quot;https://raw.githubusercontent.com/infoserviziocivile/SCS2026-quiz/main/24_%20STILL_Cultura%20per%20lo%20sviluppo.jpg&quot; class=&quot;projImage&quot;&gt;
   &lt;/div&gt;
   &lt;div class=&quot;right-col&quot;&gt;
     &lt;a class=&quot;btnDownload&quot; href=&quot;https://infoserviziocivile.github.io/SCS2026-quiz/scheda-cpls.PDF&quot; target=&quot;_blank&quot;&gt;SCARICA LA SCHEDA&lt;/a&gt;
@@ -1610,6 +1554,336 @@ true, &quot;gel&quot;
     &lt;div class=&quot;unlockActions&quot;&gt;(link-goto: &quot;RIFAI IL QUIZ&quot;, &quot;Start&quot;)&lt;/div&gt;
     &lt;div class=&quot;scsLink&quot;&gt;Scopri tutti i progetti su&lt;br&gt;&lt;a href=&quot;https://infoserviziocivile.it&quot; target=&quot;_blank&quot;&gt;infoserviziocivile.it&lt;/a&gt;&lt;/div&gt;
   &lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="80" name="Risultati_TS_ambiente" tags="" position="100,1000" size="100,100">&lt;div class=&quot;unlockBadge&quot;&gt;I PROGETTI CHE FANNO PER TE!&lt;/div&gt;
+
+&lt;p&gt;Se ti interessa l’ambiente e il territorio:&lt;/p&gt;
+
+(link: &quot;Ti regalo nuove ali&quot;)[
+(goto: &quot;proj_ali&quot;)
+]
+
+&lt;div class=&quot;unlockActions&quot;&gt;
+(link-goto: &quot;RIFAI IL QUIZ&quot;, &quot;Start&quot;)
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="81" name="Risultati_TS_sport" tags="" position="100,1100" size="100,100">&lt;div class=&quot;unlockBadge&quot;&gt;I PROGETTI CHE FANNO PER TE!&lt;/div&gt;
+
+&lt;p&gt;Se ti piace il movimento e lavorare in gruppo attraverso lo sport:&lt;/p&gt;
+
+(link: &quot;Scacco, Rimbalzo e Inclusione&quot;)[
+(goto: &quot;proj_sri&quot;)
+]
+(link: &quot;Melara si muove&quot;)[
+(goto: &quot;proj_msm&quot;)
+]
+
+&lt;div class=&quot;unlockActions&quot;&gt;
+(link-goto: &quot;RIFAI IL QUIZ&quot;, &quot;Start&quot;)
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="82" name="Risultati_TS_assistenza" tags="" position="100,1200" size="100,100">&lt;div class=&quot;unlockBadge&quot;&gt;I PROGETTI CHE FANNO PER TE!&lt;/div&gt;
+
+&lt;p&gt;Se vuoi aiutare le persone e metterti al servizio della comunità:&lt;/p&gt;
+
+(link: &quot;Giovani Sinergie Rinnovabili 2026&quot;)[
+(goto: &quot;proj_gsr&quot;)
+]
+(link: &quot;Energie in Circolo 2026&quot;)[
+(goto: &quot;proj_eic&quot;)
+]
+(link: &quot;Una Comunità Educante 2026&quot;)[
+(goto: &quot;proj_uce&quot;)
+]
+(link: &quot;Scacco, Rimbalzo e Inclusione&quot;)[
+(goto: &quot;proj_sri&quot;)
+]
+(link: &quot;Melara si muove&quot;)[
+(goto: &quot;proj_msm&quot;)
+]
+
+&lt;div class=&quot;unlockActions&quot;&gt;
+(link-goto: &quot;RIFAI IL QUIZ&quot;, &quot;Start&quot;)
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="83" name="Risultati_TS_cultura" tags="" position="100,1300" size="100,100">&lt;div class=&quot;unlockBadge&quot;&gt;I PROGETTI CHE FANNO PER TE!&lt;/div&gt;
+
+&lt;p&gt;Se ti interessa la cultura e la valorizzazione del patrimonio:&lt;/p&gt;
+
+(link: &quot;Culturando!&quot;)[
+(goto: &quot;proj_cul&quot;)
+]
+
+&lt;div class=&quot;unlockActions&quot;&gt;
+(link-goto: &quot;RIFAI IL QUIZ&quot;, &quot;Start&quot;)
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="84" name="Risultati_TS_educazione" tags="" position="100,1400" size="100,100">&lt;div class=&quot;unlockBadge&quot;&gt;I PROGETTI CHE FANNO PER TE!&lt;/div&gt;
+
+&lt;p&gt;Se ti interessa lavorare con giovani, comunità e attività educative:&lt;/p&gt;
+
+(link: &quot;Cyber Community&quot;)[
+(goto: &quot;proj_cyb&quot;)
+]
+(link: &quot;Power Up&quot;)[
+(goto: &quot;proj_pup&quot;)
+]
+(link: &quot;Protagonisti noi 2.0&quot;)[
+(goto: &quot;proj_pro&quot;)
+]
+(link: &quot;Destinazione futuro&quot;)[
+(goto: &quot;proj_df&quot;)
+]
+(link: &quot;Special summer 2026&quot;)[
+(goto: &quot;proj_spsu&quot;)
+]
+(link: &quot;O...MA che oratorio! 2026&quot;)[
+(goto: &quot;proj_oma&quot;)
+]
+
+&lt;div class=&quot;unlockActions&quot;&gt;
+(link-goto: &quot;RIFAI IL QUIZ&quot;, &quot;Start&quot;)
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="85" name="Risultati_TS_diritti" tags="" position="100,1500" size="100,100">&lt;div class=&quot;unlockBadge&quot;&gt;I PROGETTI CHE FANNO PER TE!&lt;/div&gt;
+
+&lt;p&gt;Se ti interessano i diritti, le relazioni tra culture e le tematiche sociali globali:&lt;/p&gt;
+
+(link: &quot;The Melting Pot 2026/27&quot;)[
+(goto: &quot;proj_tmp&quot;)
+]
+
+&lt;div class=&quot;unlockActions&quot;&gt;
+(link-goto: &quot;RIFAI IL QUIZ&quot;, &quot;Start&quot;)
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="86" name="Risultati_UD_assistenza" tags="" position="300,1000" size="100,100">&lt;div class=&quot;unlockBadge&quot;&gt;I PROGETTI CHE FANNO PER TE!&lt;/div&gt;
+
+&lt;p&gt;Se vuoi aiutare le persone e lavorare in situazioni di fragilità:&lt;/p&gt;
+
+(link: &quot;Animare all&#39;incontro&quot;)[
+(goto: &quot;proj_ain&quot;)
+]
+(link: &quot;La persona con disabilità&quot;)[
+(goto: &quot;proj_lpcd&quot;)
+]
+(link: &quot;Solidali a 365 gradi&quot;)[
+(goto: &quot;proj_s365g&quot;)
+]
+(link: &quot;Special needs friends&quot;)[
+(goto: &quot;proj_snf&quot;)
+]
+
+&lt;div class=&quot;unlockActions&quot;&gt;
+(link-goto: &quot;RIFAI IL QUIZ&quot;, &quot;Start&quot;)
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="87" name="Risultati_UD_educazione" tags="" position="300,1100" size="100,100">&lt;div class=&quot;unlockBadge&quot;&gt;I PROGETTI CHE FANNO PER TE!&lt;/div&gt;
+
+&lt;p&gt;Se ti interessa lavorare con giovani, attività educative e comunità:&lt;/p&gt;
+
+(link: &quot;Maria al Tempio&quot;)[
+(goto: &quot;proj_mat&quot;)
+]
+(link: &quot;Amplifica&quot;)[
+(goto: &quot;proj_amp&quot;)
+]
+(link: &quot;Talmassons tra natura e cultura&quot;)[
+(goto: &quot;proj_tcn&quot;)
+]
+(link: &quot;SKUPAJ MED POČITNICAMI 10&quot;)[
+(goto: &quot;proj_smp&quot;)
+]
+(link: &quot;Una mano a Don Bosco&quot;)[
+(goto: &quot;proj_umadb&quot;)
+]
+(link: &quot;Oratorio a colori&quot;)[
+(goto: &quot;proj_oac&quot;)
+]
+(link: &quot;Oratorio vivo&quot;)[
+(goto: &quot;proj_ov&quot;)
+]
+(link: &quot;Insieme a scuola&quot;)[
+(goto: &quot;proj_ias&quot;)
+]
+(link: &quot;Vivere l’Oratorio 2026&quot;)[
+(goto: &quot;proj_vlo&quot;)
+]
+(link: &quot;EnJOY your summer 2026&quot;)[
+(goto: &quot;proj_joy&quot;)
+]
+(link: &quot;Centro vacanze 2026&quot;)[
+(goto: &quot;proj_cv&quot;)
+]
+(link: &quot;InforMajano&quot;)[
+(goto: &quot;proj_im&quot;)
+]
+(link: &quot;A servizio dal Grifone&quot;)[
+(goto: &quot;proj_gri&quot;)
+]
+(link: &quot;A servizio dal Grifone&quot;)[
+(goto: &quot;proj_gri&quot;)
+]
+(link: &quot;Radici di pietra&quot;)[
+(goto: &quot;proj_rdp&quot;)
+]
+(link: &quot;Cividale del Friuli&quot;)[
+(goto: &quot;proj_cdf&quot;)
+]
+(link: &quot;Sportivamente a San Zorz&quot;)[
+(goto: &quot;proj_ssz&quot;)
+]
+
+&lt;div class=&quot;unlockActions&quot;&gt;
+(link-goto: &quot;RIFAI IL QUIZ&quot;, &quot;Start&quot;)
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="88" name="Risultati_UD_territorio" tags="" position="300,1200" size="100,100">&lt;div class=&quot;unlockBadge&quot;&gt;I PROGETTI CHE FANNO PER TE!&lt;/div&gt;
+
+&lt;p&gt;Se ti interessa il territorio, l’ambiente e la valorizzazione della comunità locale:&lt;/p&gt;
+
+(link: &quot;Estate a Sutrio 2026&quot;)[
+(goto: &quot;proj_eas&quot;)
+]
+(link: &quot;Valorizzazione e promozione del territorio comunale 2026&quot;)[
+(goto: &quot;proj_vptr&quot;)
+]
+(link: &quot;Mani giovani per il bene comune&quot;)[
+(goto: &quot;proj_mgbc&quot;)
+]
+(link: &quot;Talmassons tra cultura e natura&quot;)[
+(goto: &quot;proj_tcn&quot;)
+]
+
+&lt;div class=&quot;unlockActions&quot;&gt;
+(link-goto: &quot;RIFAI IL QUIZ&quot;, &quot;Start&quot;)
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="89" name="Risultati_UD_cultura" tags="" position="300,1300" size="100,100">&lt;div class=&quot;unlockBadge&quot;&gt;I PROGETTI CHE FANNO PER TE!&lt;/div&gt;
+
+&lt;p&gt;Se ti interessano cultura, patrimonio e valorizzazione del territorio:&lt;/p&gt;
+
+(link: &quot;Cultura per lo sviluppo&quot;)[
+(goto: &quot;proj_cpls&quot;)
+]
+(link: &quot;A servizio dal Grifone&quot;)[
+(goto: &quot;proj_gri&quot;)
+]
+(link: &quot;Il processo di stregoneria e i Beneandanti a Buttrio&quot;)[
+(goto: &quot;proj_psbb&quot;)
+]
+(link: &quot;Radici di pietra&quot;)[
+(goto: &quot;proj_rdp&quot;)
+]
+(link: &quot;Cividale del Friuli&quot;)[
+(goto: &quot;proj_cdf&quot;)
+]
+(link: &quot;SKUPAJ MED POČITNICAMI 10&quot;)[
+(goto: &quot;proj_smp&quot;)
+]
+
+&lt;div class=&quot;unlockActions&quot;&gt;
+(link-goto: &quot;RIFAI IL QUIZ&quot;, &quot;Start&quot;)
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="90" name="Risultati_UD_diritti" tags="" position="300,1400" size="100,100">&lt;div class=&quot;unlockBadge&quot;&gt;I PROGETTI CHE FANNO PER TE!&lt;/div&gt;
+
+&lt;p&gt;Se ti interessano i diritti, la cittadinanza attiva e i temi della sostenibilità sociale:&lt;/p&gt;
+
+(link: &quot;Consumi o scegli?&quot;)[
+(goto: &quot;proj_csg&quot;)
+]
+
+&lt;div class=&quot;unlockActions&quot;&gt;
+(link-goto: &quot;RIFAI IL QUIZ&quot;, &quot;Start&quot;)
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="91" name="Risultati_UD_sport" tags="" position="300,1500" size="100,100">&lt;div class=&quot;unlockBadge&quot;&gt;I PROGETTI CHE FANNO PER TE!&lt;/div&gt;
+
+&lt;p&gt;Se ti piace lo sport, il movimento e lavorare in gruppo:&lt;/p&gt;
+
+(link: &quot;SportivaMente a San Zorz&quot;)[
+(goto: &quot;proj_ssz&quot;)
+]
+
+&lt;div class=&quot;unlockActions&quot;&gt;
+(link-goto: &quot;RIFAI IL QUIZ&quot;, &quot;Start&quot;)
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="92" name="Risultati_PN_assistenza" tags="" position="500,1000" size="100,100">&lt;div class=&quot;unlockBadge&quot;&gt;I PROGETTI CHE FANNO PER TE!&lt;/div&gt;
+
+&lt;p&gt;Se vuoi aiutare le persone e lavorare in situazioni di fragilità:&lt;/p&gt;
+
+(link: &quot;Il sogno che si fa dono&quot;)[
+(goto: &quot;proj_sfd&quot;)
+]
+(link: &quot;Nessuno escluso: facilitatori digitali a Brugnera&quot;)[
+(goto: &quot;proj_ne&quot;)
+]
+
+&lt;div class=&quot;unlockActions&quot;&gt;
+(link-goto: &quot;RIFAI IL QUIZ&quot;, &quot;Start&quot;)
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="93" name="Risultati_PN_educazione" tags="" position="500,1100" size="100,100">&lt;div class=&quot;unlockBadge&quot;&gt;I PROGETTI CHE FANNO PER TE!&lt;/div&gt;
+
+&lt;p&gt;Se ti interessa lavorare con giovani, comunità e attività educative:&lt;/p&gt;
+
+(link: &quot;Sport... palestra di vita&quot;)[
+(goto: &quot;proj_spv&quot;)
+]
+(link: &quot;ScopriAMO San Martino&quot;)[
+(goto: &quot;proj_ssm&quot;)
+]
+(link: &quot;Un passo verso il futuro&quot;)[
+(goto: &quot;proj_upvf&quot;)
+]
+
+&lt;div class=&quot;unlockActions&quot;&gt;
+(link-goto: &quot;RIFAI IL QUIZ&quot;, &quot;Start&quot;)
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="94" name="Risultati_PN_cultura" tags="" position="500,1200" size="100,100">&lt;div class=&quot;unlockBadge&quot;&gt;I PROGETTI CHE FANNO PER TE!&lt;/div&gt;
+
+&lt;p&gt;Se ti interessa la cultura e la valorizzazione dei percorsi educativi:&lt;/p&gt;
+
+(link: &quot;Biblioteca Innovativa d&#39;Istituto&quot;)[
+(goto: &quot;proj_bii&quot;)
+]
+
+&lt;div class=&quot;unlockActions&quot;&gt;
+(link-goto: &quot;RIFAI IL QUIZ&quot;, &quot;Start&quot;)
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="95" name="Risultati_PN_sport" tags="" position="500,1300" size="100,100">&lt;div class=&quot;unlockBadge&quot;&gt;I PROGETTI CHE FANNO PER TE!&lt;/div&gt;
+
+&lt;p&gt;Se ti piace il movimento, lo sport e lavorare in gruppo:&lt;/p&gt;
+
+(link: &quot;Sport... palestra di vita&quot;)[
+(goto: &quot;proj_spv&quot;)
+]
+
+&lt;div class=&quot;unlockActions&quot;&gt;
+(link-goto: &quot;RIFAI IL QUIZ&quot;, &quot;Start&quot;)
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="96" name="Risultati_GO_assistenza" tags="" position="700,1000" size="100,100">&lt;div class=&quot;unlockBadge&quot;&gt;I PROGETTI CHE FANNO PER TE!&lt;/div&gt;
+
+&lt;p&gt;Se vuoi aiutare le persone e lavorare in situazioni di fragilità:&lt;/p&gt;
+
+(link: &quot;Rinnovamenti&quot;)[
+(goto: &quot;proj_rin&quot;)
+]
+
+&lt;div class=&quot;unlockActions&quot;&gt;
+(link-goto: &quot;RIFAI IL QUIZ&quot;, &quot;Start&quot;)
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="97" name="Risultati_GO_educazione" tags="" position="700,1100" size="100,100">&lt;div class=&quot;unlockBadge&quot;&gt;I PROGETTI CHE FANNO PER TE!&lt;/div&gt;
+
+&lt;p&gt;Se ti interessa lavorare con giovani e attività educative:&lt;/p&gt;
+
+(link: &quot;Rinnovamenti&quot;)[
+(goto: &quot;proj_rin&quot;)
+]
+
+&lt;div class=&quot;unlockActions&quot;&gt;
+(link-goto: &quot;RIFAI IL QUIZ&quot;, &quot;Start&quot;)
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="98" name="Risultati_GO_cultura" tags="" position="700,1200" size="100,100">&lt;div class=&quot;unlockBadge&quot;&gt;I PROGETTI CHE FANNO PER TE!&lt;/div&gt;
+
+&lt;p&gt;Se ti interessa la cultura, le biblioteche e il patrimonio del territorio:&lt;/p&gt;
+
+(link: &quot;Reti di cultura&quot;)[
+(goto: &quot;proj_rdc&quot;)
+]
+
+(link: &quot;Estate da sfogliare – Villesse&quot;)[
+(goto: &quot;proj_es&quot;)
+]
+
+(link: &quot;Estate da sfogliare – Ronchi dei Legionari&quot;)[
+(goto: &quot;proj_esR&quot;)
+]
+
+(link: &quot;Pagine d’estate – Grado&quot;)[
+(goto: &quot;proj_pde&quot;)
+]
+
+(link: &quot;Tempo di libri – Romans d’Isonzo&quot;)[
+(goto: &quot;proj_tdl&quot;)
+]
+
+(link: &quot;Tra generazioni e libri – Romans d’Isonzo&quot;)[
+(goto: &quot;proj_gel&quot;)
+]
+
+&lt;div class=&quot;unlockActions&quot;&gt;
+(link-goto: &quot;RIFAI IL QUIZ&quot;, &quot;Start&quot;)
 &lt;/div&gt;</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
